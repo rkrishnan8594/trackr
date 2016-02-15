@@ -1,0 +1,49 @@
+.registration {
+  margin: 40px 30% 0 30%;
+  width: 40%;
+}
+
+.registration__column {
+  display: inline-block;
+}
+
+.right { float: right; }
+
+.field { margin: 30px 0 0 0; }
+
+.actions {
+  margin: 35px auto;
+  width: 100px;
+}
+
+.role__select {
+  background: transparent;
+  border: 1px solid #FFF;
+  border-radius: 0;
+  color: #FFF;
+  font-size: 14px;
+  height: 40px;
+  margin-top: 25px;
+  width: 200px;
+  &:focus { outline: none; }
+}
+
+input[type=submit] {
+  background-color: $primary;
+  border: 2px solid #FFF;
+  color: white;
+  cursor: pointer;
+  height: 35px;
+  width: 100px;
+  &:hover {
+    background-color: #FFF;
+    color: $primary;
+  }
+}
+
+.login {
+  margin: 45px auto;
+  width: 200px;
+}
+
+.info__text { font-size: 12px; }

@@ -1,0 +1,64 @@
+/************
+* Variables
+************/
+$pink: #E08283;
+$downy: #65C6BB;
+$turquoise: #4ECDC4;
+$lemon: #F5D76E;
+
+$primary: $pink;
+$secondary: $lemon;
+
+/************
+*   Fonts
+************/
+
+@font-face {
+  font-family: 'GandhiSans-Bold';
+  src: font-url('GandhiSans-Bold.otf');
+}
+
+/************
+*   Base
+************/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $primary;
+}
+
+a {
+  color: #FFF;
+  font-family: "HelveticaNeue";
+  font-weight: 400;
+  text-decoration: none;
+}
+
+h2 {
+  font-family: "HelveticaNeue";
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+{
+  background-color: $primary;
+  border: 0;
+  border-bottom: 2px solid #FFF;
+  height: 45px;
+  width: 200px;
+  &:focus {
+    outline: none;
+    border-color: $secondary;
+  }
+}
+
+label {
+  font-family: "HelveticaNeue";
+  font-size: 16px;
+  color: #FFF;
+}

@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>IncidentTracker</title>
+  <title>Trackr</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<div class="header">
+  <div class="logo">
+    <a href="/">
+      <%= image_tag 'shield-outline.png', class:"logo__icn" %>
+      <h1 class="logo__title">Trackr</h1>
+    </a>
+  </div>
+  <div class="navigation"></div>
+</div>
 
 <%= yield %>
 
