@@ -1,25 +1,33 @@
 class Users::RegistrationsController < Devise::RegistrationsController
+  before_filter :get_departments
+
+  def get_departments
+    @departments = Department.all
+  end
+
   private
 
   def sign_up_params
-    params.require(:user).permit(:first_name, :last_name, :email, :role, :password, :password_confirmation)
+    params.require(:user).permit(:first_name, :last_name, :email, :role, :department_id, :password, :password_confirmation)
   end
 
   def account_update_params
-    params.require(:user).permit(:first_name, :last_name, :email, :role, :password, :password_confirmation, :current_password)
+    params.require(:user).permit(:first_name, :last_name, :email, :role, :department_id, :password, :password_confirmation, :current_password)
   end
 # before_filter :configure_sign_up_params, only: [:create]
 # before_filter :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+  #def new
+  #  super
+  #  @departments = Department.all
+  #end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  #def create
+  #  super
+  #  @departments = Department.all
+  #end
 
   # GET /resource/edit
   # def edit

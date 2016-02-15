@@ -15,7 +15,12 @@
 
       <div class="field">
         <%= f.label :role %><br />
-        <%= select_tag "role", "<option>Student</option><option>Faculty</option>".html_safe, :class=>'role__select' %>
+        <%= select_tag "role", "<option>Student</option><option>Faculty</option>".html_safe, :class=>'role__select js-role' %>
+      </div>
+
+      <div class="field department">
+        <%= f.label :department %><br />
+        <%= select_tag "department", options_from_collection_for_select(@departments, "id", "name"), :class=>'role__select' %>
       </div>
     </div>
 
