@@ -16,16 +16,12 @@
   width: 100px;
 }
 
-.role__select {
-  background: transparent;
-  border: 1px solid #FFF;
-  border-radius: 0;
+#user_role{
   color: #FFF;
   font-size: 14px;
   height: 40px;
   margin-top: 25px;
   width: 200px;
-  &:focus { outline: none; }
 }
 
 input[type=submit] {

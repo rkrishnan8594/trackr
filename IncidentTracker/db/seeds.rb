@@ -13,3 +13,10 @@ departments = Department.create([
   { name: 'Housing' },
   { name: 'Mail & Print' },
 ])
+
+categories = Category.create([
+  { name: 'Fire' },
+  { name: 'Flooding' },
+  { name: 'Vandalism' },
+  { name: 'Theft' },
+])

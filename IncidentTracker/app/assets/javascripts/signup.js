@@ -1,6 +1,7 @@
 $(document).ready(function() {
-  $('.js-role').on('change', function() {
-    if($('.js-role').val() == 'Faculty') {
+  $('#user_role').on('change', function() {
+    console.log('hey');
+    if($('#user_role').val() == 'Faculty') {
       $('.department').show();
     } else {
       $('.department').hide();

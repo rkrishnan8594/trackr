@@ -3,17 +3,29 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .incident-new {
-  margin: 0 auto;
-  width: 500px;
+  margin: 20px auto 0px auto;
+  width: 800px;
 }
 
 .description__area {
   background-color: $primary;
-  border: 1px solid #FFF;
+  border: 2px solid #FFF;
   color: #FFF;
   font-size: 14px;
-  height: 250px;
+  height: 265px;
   margin-top: 10px;
   outline: none;
   width: 500px;
+  &:focus {
+    border-color: $lemon;
+  }
+}
+
+.container__one {
+  display: inline-block;
+}
+
+.container__two {
+  display: inline-block;
+  float: right;
 }

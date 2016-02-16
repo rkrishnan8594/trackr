@@ -12,25 +12,35 @@
       </div>
     <% end %>
 
-    <div class="field">
-      <%= f.label :description %><br>
-      <%= f.text_area :description, :class=> 'description__area' %>
-    </div>
-    <div class="field">
-      <%= f.label :location %><br>
-      <%= f.text_field :location %>
-    </div>
-    <div class="field">
-      <%= f.label :severity %><br>
-      <%= f.text_field :severity %>
-    </div>
-    <div class="field">
-      <%= f.label :date %><br>
-      <%= f.date_select :date %>
-    </div>
-    <div class="field">
-      <%= f.label :time %><br>
-      <%= f.time_select :time %>
+    <div class="fields">
+      <div class="container__one">
+        <div class="field">
+          <%= f.label :description %><br>
+          <%= f.text_area :description, :class=> 'description__area' %>
+        </div>
+      </div>
+      <div class="container__two">
+        <div class="field">
+          <%= f.label :location %><br>
+          <%= f.text_field :location %>
+        </div>
+        <div class="field">
+          <%= f.label :category %><br />
+          <%= f.collection_select :category_ids, Category.all, :id, :name %>
+        </div>
+        <div class="field">
+          <%= f.label :severity %><br>
+          <%= f.select :severity, (0..5) %>
+        </div>
+        <div class="field">
+          <%= f.label :date %><br>
+          <%= f.date_select :date %>
+        </div>
+        <div class="field">
+          <%= f.label :time %><br>
+          <%= f.time_select :time %>
+        </div>
+      </div>
     </div>
     <div class="actions">
       <%= f.submit %>

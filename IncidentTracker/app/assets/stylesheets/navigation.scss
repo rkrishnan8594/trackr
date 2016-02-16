@@ -1,5 +1,23 @@
+.auth__links {
+  margin-bottom: 30px;
+  position: relative;
+  left: 75%;
+  top: 10px;
+}
+
+.auth__link {
+  font-size: 12px;
+  margin-right: 15px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.header {
+  margin-top: 10px;
+}
+
 .logo {
-  margin-top: 20px;
   text-align: center;
 }
 
