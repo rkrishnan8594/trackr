@@ -24,6 +24,7 @@ class IncidentsController < ApplicationController
   # POST /incidents
   # POST /incidents.json
   def create
+    #incident_params[:status] = "Open"
     @incident = Incident.new(incident_params)
     @incident.set_user!(current_user)
 

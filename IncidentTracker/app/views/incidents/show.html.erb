@@ -1,39 +1,40 @@
-<p id="notice"><%= notice %></p>
+<div class="incident">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @incident.description %>
-</p>
+  <div class="column_one">
+    <div class="incident__info">
+      <label>User</label><br>
+      <div class="info__text">
+        <%= User.find(@incident.user_id).first_name %>
+        <%= User.find(@incident.user_id).last_name %>
+      </div>
+    </div>
 
-<p>
-  <strong>Location:</strong>
-  <%= @incident.location %>
-</p>
+    <div class="incident__info">
+      <label>Description</label><br>
+      <div class="info__text"><%= @incident.description %></div>
+    </div>
+  </div>
 
-<p>
-  <strong>Status:</strong>
-  <%= @incident.status %>
-</p>
+  <div class="column_two">
+    <div class="incident__info">
+      <label>Location:</label>
+      <%= @incident.location %>
+    </div>
 
-<p>
-  <strong>Severity:</strong>
-  <%= @incident.severity %>
-</p>
+    <div class="incident__info">
+      <label>Severity:</label>
+      <%= @incident.severity %>
+    </div>
 
-<p>
-  <strong>Date:</strong>
-  <%= @incident.date %>
-</p>
+    <div class="incident__info">
+      <label>Date:</label>
+      <%= @incident.date %>
+    </div>
 
-<p>
-  <strong>Time:</strong>
-  <%= @incident.time %>
-</p>
-
-<p>
-  <strong>Comments:</strong>
-  <%= @incident.comments %>
-</p>
-
-<%= link_to 'Edit', edit_incident_path(@incident) %> |
-<%= link_to 'Back', incidents_path %>
+    <div class="incident__info">
+      <label>Time:</label>
+      <%= (@incident.time).to_s(:time) %>
+    </div>
+  </div>
+</div>

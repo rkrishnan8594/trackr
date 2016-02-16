@@ -30,6 +30,18 @@
   float: right;
 }
 
+.incident__field {
+  margin: 30px 20px 0 0;
+}
+
+.category {
+  display: inline-block;
+}
+
+.severity {
+  display: inline-block;
+}
+
 .timeline {
   margin: 45px auto 0px auto;
   width: 1000px;
@@ -45,7 +57,65 @@
     color: $primary;
     font-family: "HelveticaNeue";
     font-weight: 400;
-    padding: 3px;
-    text-align: left;
+    padding: 5px;
+    text-align: center;
   }
+}
+
+.table__row {
+  color: #FFF;
+  font-family: "HelveticaNeue-Light";
+  font-weight: 300;
+  font-size: 14px;
+  &:hover {
+    background-color: #FFF;
+    color: $primary;
+    a {
+      color: $primary;
+    }
+  }
+}
+
+.incident__new-btn {
+  background-color: $primary;
+  border: 2px solid #FFF;
+  color: white;
+  cursor: pointer;
+  height: 35px;
+  font-size: 14px;
+  padding: 5px;
+  width: 100px;
+  &:hover {
+    background-color: #FFF;
+    color: $primary;
+  }
+}
+
+.incident {
+  margin: 60px auto 0px auto;
+  width: 700px;
+}
+
+.column_one {
+  display: inline-block;
+  width: 50%;
+}
+
+.column_two {
+  display: inline-block;
+  float: right;
+}
+
+.incident__info {
+  font-family: "HelveticaNeue";
+  font-size: 14px;
+  color: #FFF;
+  margin-bottom: 20px;
+}
+
+.info__text {
+  font-family: "HelveticaNeue";
+  font-size: 14px;
+  color: #FFF;
+  margin-top: 15px;
 }

@@ -6,7 +6,7 @@ $downy: #65C6BB;
 $turquoise: #4ECDC4;
 $lemon: #F5D76E;
 
-$primary: $turquoise;
+$primary: $pink;
 $secondary: $lemon;
 
 /************
@@ -75,10 +75,21 @@ select {
   outline-color: $lemon;
 }
 
+table {
+  border-collapse: collapse;
+}
+
 td {
   border-right: 2px solid #FFF;
-  color: #FFF;
+  padding: 3px;
+}
+
+tr {
+  border-bottom: 2px solid #FFF;
+}
+
+p {
   font-family: "HelveticaNeue";
   font-size: 14px;
-  padding: 3px;
+  color: #FFF;
 }

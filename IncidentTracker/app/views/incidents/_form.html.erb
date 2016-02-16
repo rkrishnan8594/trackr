@@ -20,23 +20,23 @@
         </div>
       </div>
       <div class="container__two">
-        <div class="field">
+        <div class="incident__field">
           <%= f.label :location %><br>
           <%= f.text_field :location %>
         </div>
-        <div class="field">
+        <div class="incident__field category">
           <%= f.label :category %><br />
           <%= f.collection_select :category_ids, Category.all, :id, :name %>
         </div>
-        <div class="field">
+        <div class="incident__field severity">
           <%= f.label :severity %><br>
           <%= f.select :severity, (0..5) %>
         </div>
-        <div class="field">
+        <div class="incident__field">
           <%= f.label :date %><br>
           <%= f.date_select :date %>
         </div>
-        <div class="field">
+        <div class="incident__field">
           <%= f.label :time %><br>
           <%= f.time_select :time %>
         </div>
