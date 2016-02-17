@@ -34,30 +34,7 @@ Average hours per person learning ruby : 4hr
 
 Average hours per person developing/testing/designing/researching/etc MVP: 24hr
 
-Challanges we faced:
-
-  Installation and setup configuration and version control
-  
-      We have 2 windows users, one mac user, and one linux user so getting everyone on the same page was difficult
-      
-  Learning github
-  
-      Only one of our members had used github before, and learning branching, merging, and all other features was difficult
-      
-  Deciding which if any gems to use
-  
-      We looked into bootstrap, jquery mobile, datatables among other gems/packages and spent a lot of time testing features
-      
-      before deciding to add our own styles
-      
-  Design/architecture
-  
-      We spent a lot of time trying to create a simple design theme that would be appropriate for our diverse users
-      
-      We spent a lot of time discussing the scope of the mvp and what functionality/data we thought was really necessary for 
-      the MVP
-      
-      
+We faced quite a few challenges during development of this mvp. With respect to installation and setup configuration and version control - We have 2 windows users, one mac user, and one linux user so getting everyone on the same page was difficult.  Learning github was also difficult because only one of our members had used github before, and we had to learn learning branching, merging, and all other features.  We also had some difficulty deciding which if any gems to use - we looked into bootstrap, jquery mobile, datatables among other gems/packages and spent a lot of time testing features before deciding to add our own styles. With respect to design/architecture -we spent a lot of time trying to create a simple design theme that would be appropriate for our diverse user base.  We also spent a lot of time discussing the scope of the mvp and what functionality/data we thought was really necessary for the MVP
       
       
 
