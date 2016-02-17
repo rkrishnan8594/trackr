@@ -20,12 +20,18 @@ These are simply the departments that comprise Operations Services. The members 
 #Leg 2: MVP
 
 ### Architecture and Tools
-We used Ruby on Rails for the implementation of the MVP.  This was primarily because of the following:\n
+We used Ruby on Rails for the implementation of the MVP.  This was primarily because of the following:
+
     Inbuilt RESTful design
+    
     Strict to adherence to MVC design structure
+    
     Object Relational Mapping
+    
     Rails is very well established platform in the professional developement scene
+    
     Rails has a very elementary learning curve
+    
     
 We used Postgres for the following reasons:
     We are building for 'n' users 
