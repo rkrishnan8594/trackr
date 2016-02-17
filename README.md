@@ -1,6 +1,6 @@
-Leg 1: Wireframe and Model
+# Leg 1: Wireframe and Model
 
-# Design
+### Design
 After reviewing the information provided to us from Tina, we've decided to design the data schema for the application using four tables: Users, Incidents, Categories, and Departments.
 
 ### Users
@@ -17,7 +17,8 @@ These are simply the departments that comprise Operations Services. The members 
 
 
 
-Leg 2: MVP
+#Leg 2: MVP
+
 ### Architecture and Tools
 We used Ruby on Rails for the implementation of the MVP.  This was primarily because of the following:
     Inbuilt RESTful design
