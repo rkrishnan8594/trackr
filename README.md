@@ -20,31 +20,19 @@ These are simply the departments that comprise Operations Services. The members 
 #Leg 2: MVP
 
 ### Architecture and Tools
-We used Ruby on Rails for the implementation of the MVP.  This was primarily because of the following:
-
-    Inbuilt RESTful design
-    
-    Strict to adherence to MVC design structure
-    
-    Object Relational Mapping
-    
-    Rails is very well established platform in the professional developement scene
-    
-    Rails has a very elementary learning curve
+We used Ruby on Rails for the implementation of the MVP.  This was primarily because of the inbuilt RESTful design, strict to adherence to MVC design structure, object Relational Mapping, the fact that Rails is very well established platform in the professional developement scene, and Rails has a very elementary learning curve
     
     
-We used Postgres for the following reasons:
-    We are building for 'n' users 
-    Well known for reliability and stability
-    Cross platform support
-    Good performance
+We decided to use used Postgres as our database.  This was because we are building for 'n' users, postgres is well known for reliability and stability, it has solid cross platform support, and finally generally has a reputation for good performance
     
 We used only the default gems packages with Rails
 No additional APIs or dependencies were used
 
 ### Group Work/Effort Estimation
 Average hours per person learning ruby : 4hr
+
 Average hours per person developing/testing/designing/researching/etc MVP: 24hr
+
 Challanges we faced:
   Installation and setup configuration and version control
       We have 2 windows users, one mac user, and one linux user so getting everyone on the same page was difficult
