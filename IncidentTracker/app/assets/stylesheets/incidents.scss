@@ -49,6 +49,7 @@
 
 .timeline__table {
   border: 2px solid #FFF;
+  width: 100%;
 }
 
 .table__fields {
@@ -118,4 +119,8 @@
   font-size: 14px;
   color: #FFF;
   margin-top: 15px;
+}
+
+.info__label {
+  color: $lemon;
 }

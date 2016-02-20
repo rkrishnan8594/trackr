@@ -3,7 +3,7 @@
 
   <div class="column_one">
     <div class="incident__info">
-      <label>User</label><br>
+      <label class="info__label">User</label><br>
       <div class="info__text">
         <%= User.find(@incident.user_id).first_name %>
         <%= User.find(@incident.user_id).last_name %>
@@ -11,29 +11,29 @@
     </div>
 
     <div class="incident__info">
-      <label>Description</label><br>
+      <label class="info__label">Description</label><br>
       <div class="info__text"><%= @incident.description %></div>
     </div>
   </div>
 
   <div class="column_two">
     <div class="incident__info">
-      <label>Location:</label>
+      <label class="info__label">Location:</label>
       <%= @incident.location %>
     </div>
 
     <div class="incident__info">
-      <label>Severity:</label>
+      <label class="info__label">Severity:</label>
       <%= @incident.severity %>
     </div>
 
     <div class="incident__info">
-      <label>Date:</label>
+      <label class="info__label">Date:</label>
       <%= @incident.date %>
     </div>
 
     <div class="incident__info">
-      <label>Time:</label>
+      <label class="info__label">Time:</label>
       <%= (@incident.time).to_s(:time) %>
     </div>
   </div>
