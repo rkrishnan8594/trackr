@@ -29,3 +29,9 @@ development:
   encoding: unicode
   database: incidenttracker_development
   pool: 5
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: incidenttracker_production
+  pool: 5
