@@ -1,5 +1,5 @@
 /*body {
-  background-color: #fff;
+  background-color: $primary;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -26,7 +26,7 @@ a {
   }
 
   &:hover {
-    color: #fff;
+    color: $primary;
     background-color: #000;
   }
 }
@@ -63,7 +63,7 @@ div {
     margin: -7px;
     margin-bottom: 0px;
     background-color: #c00;
-    color: #fff;
+    color: $primary;
   }
 
   ul li {

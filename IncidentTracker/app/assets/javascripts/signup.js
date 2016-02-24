@@ -7,6 +7,10 @@ $(document).on('page:load', function() {
     }
   });
 
+  $('#example').DataTable({
+    responsive: true
+  });
+
   /*$('.table__row').on('click', function() {
     window.document.location = $(this).data("href");
   });*/

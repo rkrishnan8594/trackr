@@ -14,15 +14,17 @@
 }
 
 .header {
-  margin-top: 10px;
+  margin: 10px auto 0 auto;
+  width: 75%;
 }
 
 .logo {
-  text-align: center;
+  width: 200px;
+  display: inline-block;
 }
 
 .logo__title {
-  color: white;
+  color: $text;
   display: inline-block;
   font-family: 'GandhiSans-Bold';
   font-size: 36px;
@@ -32,5 +34,27 @@
 }
 
 .logo__icn {
+  height: 64px;
+  width: 64px;
   vertical-align: middle;
+}
+
+.navigation {
+  display: inline-block;
+  float: right;
+  margin-top: 28px;
+}
+
+.nav__link {
+  color: $text;
+  display: inline;
+  font-family: 'GandhiSans-Bold';
+  font-size: 18px;
+  &:not(:last-child) {
+    margin-right: 25px;
+  }
+  padding-bottom: 10px;
+  &:hover {
+    border-bottom: 3px solid $secondary;
+  }
 }

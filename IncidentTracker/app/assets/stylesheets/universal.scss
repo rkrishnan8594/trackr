@@ -1,13 +1,13 @@
 /************
 * Variables
 ************/
-$pink: #E08283;
-$downy: #65C6BB;
-$turquoise: #4ECDC4;
-$lemon: #F5D76E;
+$red: #E84B56;
+$smoke: #F5F6F7;
+$dark: #2C3E50;
 
-$primary: #000;
-$secondary: $lemon;
+$primary: $smoke;
+$secondary: $red;
+$text: $dark;
 
 /************
 *   Fonts
@@ -27,20 +27,14 @@ $secondary: $lemon;
   padding: 0;
 }
 
-body {
-  background-color: $primary;
-}
+body { background-color: $primary; }
 
 a {
-  color: #FFF;
-  font-family: "HelveticaNeue";
-  font-weight: 400;
+  color: $text;
   text-decoration: none;
 }
 
-h2 {
-  font-family: "HelveticaNeue";
-}
+h2 { font-family: "HelveticaNeue"; }
 
 input[type=text],
 input[type=email],
@@ -48,8 +42,8 @@ input[type=password],
 {
   background-color: $primary;
   border: 0;
-  border-bottom: 2px solid #FFF;
-  color: #FFF;
+  border-bottom: 2px solid $dark;
+  color: $text;
   font-size: 14px;
   height: 45px;
   width: 200px;
@@ -62,34 +56,30 @@ input[type=password],
 label {
   font-family: "HelveticaNeue";
   font-size: 16px;
-  color: #FFF;
+  color: $text;
 }
 
 select {
   background: transparent;
-  border: 1px solid #FFF;
+  border: 1px solid $dark;
   border-radius: 0;
-  color: #FFF;
+  color: $text;
   font-size: 14px;
   margin-top: 6px;
-  outline-color: $lemon;
+  outline-color: $secondary;
 }
 
-table {
-  border-collapse: collapse;
-}
+table { border-collapse: collapse; }
 
 td {
-  border-right: 2px solid #FFF;
+  border-right: 2px solid $dark;
   padding: 3px;
 }
 
-tr {
-  border-bottom: 2px solid #FFF;
-}
+tr { border-bottom: 2px solid $dark; }
 
 p {
   font-family: "HelveticaNeue";
   font-size: 14px;
-  color: #FFF;
+  color: $text;
 }

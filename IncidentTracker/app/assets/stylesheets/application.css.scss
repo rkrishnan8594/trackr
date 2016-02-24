@@ -1,4 +1,7 @@
-// Does everything application.css would have done.
+/* Does everything application.css would have done.
+*= require dataTables/jquery.dataTables
+*= require dataTables/extras/dataTables.responsive
+*/
 
 @import "universal";
 @import "home";
