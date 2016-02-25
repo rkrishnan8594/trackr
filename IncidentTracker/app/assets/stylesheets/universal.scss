@@ -76,7 +76,11 @@ td {
   padding: 3px;
 }
 
-tr { border-bottom: 2px solid $dark; }
+tr { /*border-bottom: 2px solid $dark;*/ }
+
+th {
+  color: $primary;
+}
 
 p {
   font-family: "HelveticaNeue";

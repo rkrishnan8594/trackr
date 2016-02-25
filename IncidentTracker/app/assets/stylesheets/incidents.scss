@@ -17,7 +17,7 @@
   outline: none;
   width: 500px;
   &:focus {
-    border-color: $dark;
+    border-color: $secondary;
   }
 }
 
@@ -40,66 +40,6 @@
 
 .severity {
   display: inline-block;
-}
-
-.timeline {
-  margin: 45px auto 0px auto;
-  width: 75%;
-}
-
-.timeline__table {
-  border: 2px solid $dark;
-  width: 100%;
-}
-
-.table__fields {
-  th {
-    background-color: $dark;
-    color: $primary;
-    font-family: "HelveticaNeue";
-    font-weight: 400;
-    padding: 5px;
-    text-align: center;
-  }
-}
-
-.table__row {
-  color: $text;
-  font-family: "HelveticaNeue-Light";
-  font-weight: 300;
-  font-size: 14px;
-  /*&:hover {
-    background-color: $primary;
-    color: $primary;
-    a {
-      color: $primary;
-    }
-  }*/
-}
-
-.incident__new-btn {
-  background-color: $primary;
-  border: 2px solid $dark;
-  color: $text;
-  cursor: pointer;
-  height: 35px;
-  font-size: 14px;
-  padding: 5px;
-  width: 100px;
-  &:hover {
-    background-color: $dark;
-    color: $smoke;
-  }
-}
-
-.incident {
-  margin: 60px auto 0px auto;
-  width: 700px;
-}
-
-.column_one {
-  display: inline-block;
-  width: 50%;
 }
 
 .column_two {

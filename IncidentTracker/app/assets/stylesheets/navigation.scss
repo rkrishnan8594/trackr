@@ -53,8 +53,8 @@
   &:not(:last-child) {
     margin-right: 25px;
   }
-  padding-bottom: 10px;
+  padding-bottom: 8px;
   &:hover {
-    border-bottom: 3px solid $secondary;
+    border-bottom: 4px solid $secondary;
   }
 }
