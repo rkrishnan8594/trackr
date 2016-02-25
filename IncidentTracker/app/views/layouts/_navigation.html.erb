@@ -16,9 +16,11 @@
     </a>
   </div>
   <ul class="navigation">
-    <li class="nav__link"><a href="#">Emergencies</a></li>
-    <li class="nav__link"><a href="#">Support</a></li>
-    <li class="nav__link"><a href="#">FAQ</a></li>
-    <li class="nav__link"><a href="#">Item Four</a></li>
+    <li class="nav__link text"><a href="#">Emergencies</a></li>
+    <li class="nav__link text"><a href="#">Support</a></li>
+    <li class="nav__link text"><a href="#">FAQ</a></li>
+    <li class="nav__link">
+      <%= link_to 'File New Incident', new_incident_path, :class => "incident__new-btn" %>
+    </li>
   </ul>
 </div>

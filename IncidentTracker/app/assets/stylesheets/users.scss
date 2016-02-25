@@ -26,11 +26,13 @@
 
 input[type=submit] {
   background-color: $primary;
-  border: 2px solid $dark;
-  color: $text;
+  border: 2px solid $secondary;
+  border-radius: 3px;
+  color: $secondary;
+  font-family: 'GandhiSans-Bold';
+  font-size: 14px;
+  padding: 5px 15px 3px 15px;
   cursor: pointer;
-  height: 35px;
-  width: 100px;
   &:hover {
     background-color: $secondary;
     color: $primary;

@@ -18,6 +18,11 @@ $text: $dark;
   src: font-url('GandhiSans-Bold.otf');
 }
 
+@font-face {
+  font-family: 'GandhiSans-Regular';
+  src: font-url('GandhiSans-Regular.otf');
+}
+
 /************
 *   Base
 ************/
@@ -75,8 +80,6 @@ td {
   border-right: 2px solid $dark;
   padding: 3px;
 }
-
-tr { /*border-bottom: 2px solid $dark;*/ }
 
 th {
   color: $primary;

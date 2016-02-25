@@ -3,5 +3,5 @@ $(document).on('page:change', function() {
     responsive: true
   });
 
-  $('.incident__new-btn').detach().prependTo('.dataTables_wrapper');
+  //$('.incident__new-btn').detach().prependTo('.dataTables_wrapper');
 });

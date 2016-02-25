@@ -1,12 +1,13 @@
 .auth__links {
   margin-bottom: 30px;
   position: relative;
-  left: 75%;
+  left: 78%;
   top: 10px;
 }
 
 .auth__link {
-  font-size: 12px;
+  font-family: 'HelveticaNeue';
+  font-size: 14px;
   margin-right: 15px;
   &:hover {
     text-decoration: underline;
@@ -50,11 +51,31 @@
   display: inline;
   font-family: 'GandhiSans-Bold';
   font-size: 18px;
+  padding-bottom: 8px;
   &:not(:last-child) {
     margin-right: 25px;
   }
-  padding-bottom: 8px;
+}
+
+.text {
   &:hover {
     border-bottom: 4px solid $secondary;
+  }
+}
+
+.incident__new-btn {
+  background-color: $primary;
+  border: 2px solid $secondary;
+  border-radius: 3px;
+  color: $secondary;
+  cursor: pointer;
+  height: 35px;
+  font-family: 'GandhiSans-Bold';
+  font-size: 15px;
+  padding: 5px 5px 2px 5px;
+  width: 100px;
+  &:hover {
+    background-color: $secondary;
+    color: $smoke;
   }
 }

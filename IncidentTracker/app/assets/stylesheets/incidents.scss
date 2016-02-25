@@ -4,7 +4,7 @@
 
 .incident-new {
   margin: 20px auto 0px auto;
-  width: 800px;
+  width: 75%;
 }
 
 .description__area {
@@ -23,11 +23,12 @@
 
 .container__one {
   display: inline-block;
+  margin-left: 50px;
 }
 
 .container__two {
   display: inline-block;
-  float: right;
+  margin-left: 130px;
 }
 
 .incident__field {

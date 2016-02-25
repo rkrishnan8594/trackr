@@ -30,23 +30,6 @@
   font-size: 14px;
 }
 
-.incident__new-btn {
-  background-color: $primary;
-  border: 2px solid $dark;
-  border-radius: 3px;
-  color: $text;
-  cursor: pointer;
-  height: 35px;
-  font-family: "HelveticaNeue";
-  font-size: 14px;
-  padding: 5px;
-  width: 100px;
-  &:hover {
-    background-color: $dark;
-    color: $smoke;
-  }
-}
-
 .incident {
   margin: 60px auto 0px auto;
   width: 700px;
@@ -93,6 +76,7 @@ table.dataTable tbody tr.even {
     width: 200px;
     &:focus {
       outline: none;
+      border-bottom: 2px solid $secondary;
     }
   }
 }
