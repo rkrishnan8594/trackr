@@ -6,4 +6,13 @@ FactoryGirl.define do
     last_name     "Last"
     role          "Student"
   end
+
+  factory :incident do
+    description "I am idiot."
+    location "tisch"
+    severity "3"
+    category "madhouse"
+    date "4/8"
+    time "1:1:1"
+  end
 end
