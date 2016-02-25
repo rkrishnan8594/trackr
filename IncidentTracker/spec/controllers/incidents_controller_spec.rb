@@ -22,16 +22,9 @@ describe IncidentsController do
       it 'incident not created' do
         @request.env["devise.mapping"] = Devise.mappings[:user]
         sign_in FactoryGirl.create(:user)
-        post :create, incident: FactoryGirl.attributes_for(:incident, description: nil)
-        expect(Incident.count).to eq(1) #should it be zero once we have that null thing figuredd out
-      end
-
-      it 're-renders the "new" view' do
-        @request.env["devise.mapping"] = Devise.mappings[:user]
-        sign_in FactoryGirl.create(:user)
-        post :create, incident: FactoryGirl.attributes_for(:incident, description: nil)
-#        expect(response).to render_template :new #use this after updates
-        expect(response).to redirect_to Incident.first # should route to new incident page if description not given
+        expect {
+          post :create, incident: FactoryGirl.attributes_for(:incident, severity: nil)
+        }.to raise_error(ActiveRecord::RecordInvalid)
       end
     end
   end
