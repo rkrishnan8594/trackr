@@ -24,7 +24,6 @@ class IncidentsController < ApplicationController
   # POST /incidents
   # POST /incidents.json
   def create
-    #incident_params[:status] = "Open"
     @incident = Incident.new(incident_params)
     @incident.set_user!(current_user)
 
@@ -71,6 +70,6 @@ class IncidentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def incident_params
-      params.require(:incident).permit(:description, :location, :status, :severity, {category_ids: []}, :date, :time, :comments)
+      params.require(:incident).permit(:description, :media, :location, :status, :severity, {category_ids: []}, :date, :time, :comments)
     end
 end
