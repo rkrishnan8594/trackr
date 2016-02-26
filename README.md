@@ -52,6 +52,8 @@ We decided to push our application to heroku for this leg of the project.  The m
 ### Testing
 Framework: rspec
 
+How to run our tests: clone, bundle install, rake:db create, rake:db migrate, rake:db seed, rspec spec
+
 Since we decided to use rspec, our tests are in the 'spec' folder under Incident tracker rather than the 'test' folder (which contains the default unit tests that came with the scaffold)
 
 We decided to use rspec as our testing framework mainly because of the community support and documentation.  Rspec is very widely used and we found a lot of tutorials and community threads to help us understand and implement our tests.  Another aspect of rspec we liked was the readability.  The 'describe' and 'context' syntax are very easy to understand when running tests and sharing with other members of the group.    
@@ -59,11 +61,12 @@ We decided to use rspec as our testing framework mainly because of the community
 Because we utilized the scaffold feature, many of the unit tests were created for us.  We wrote some view tests, model tests, and controller tests trying to focus on the the coding/functionality we added. 
 
 ### Future performance/optimizations for 'many' users
+We have many plans with respect to optimization and performance for higher volumes of users.  Our first priority is to research and add a CDN.  Since our app is on heroku if it started recieving a lot of traffic we would probably have to add more dynos/use some performance dynos.  This would of course cost some $$.  We are also looking into simply using AWS ourselves as a possible alternative.
+We have additionally added the datatables plugin for simple pagination on our incident index page.  This way when the number of incidents increases with many users it will not look clunky. 
 
 
 ### Other Notes
-We added the upload image functionality
-Test and development frameworks/databases added
+We added the upload image functionality, test and development frameworks/databases, and various design changes based on the feedback we have recieved
 
 
     
