@@ -44,7 +44,10 @@ We faced quite a few challenges during development of this mvp. With respect to 
 
 # Leg 3: Production and Testing
 
-### URL: (link) http://blooming-ravine-67304.herokuapp.com/
+### URL: http://blooming-ravine-67304.herokuapp.com/
+
+### Production
+We decided to push our application to heroku for this leg of the project.  The main reason we choose heroku was the integration with git and understandable layer of abstraction it provides on the cloud/aws.  
 
 ### Testing
 Framework: rspec
