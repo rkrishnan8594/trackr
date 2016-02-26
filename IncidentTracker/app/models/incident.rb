@@ -3,6 +3,7 @@ class Incident < ActiveRecord::Base
   has_and_belongs_to_many :categories
   validates :location, :severity, :presence => true
   before_save :override_field
+  mount_uploader :media, MediaUploader
 
   def override_field
     if self.status.nil?
