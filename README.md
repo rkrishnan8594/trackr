@@ -19,6 +19,12 @@ These are simply the departments that comprise Operations Services. The members 
 
 #Leg 2: MVP
 
+### Setup and installation instructions
+Clone our master branch
+Go into IncidentTracker folder
+I
+
+
 ### Architecture and Tools
 We used Ruby on Rails for the implementation of the MVP.  This was primarily because of the inbuilt RESTful design, strict to adherence to MVC design structure, object Relational Mapping, the fact that Rails is very well established platform in the professional developement scene, and Rails has a very elementary learning curve
     
@@ -35,10 +41,26 @@ Average hours per person learning ruby : 4hr
 Average hours per person developing/testing/designing/researching/etc MVP: 24hr
 
 We faced quite a few challenges during development of this mvp. With respect to installation and setup configuration and version control - We have 2 windows users, one mac user, and one linux user so getting everyone on the same page was difficult.  Learning github was also difficult because only one of our members had used github before, and we had to learn learning branching, merging, and all other features.  We also had some difficulty deciding which if any gems to use - we looked into bootstrap, jquery mobile, datatables among other gems/packages and spent a lot of time testing features before deciding to add our own styles. With respect to design/architecture -we spent a lot of time trying to create a simple design theme that would be appropriate for our diverse user base.  We also spent a lot of time discussing the scope of the mvp and what functionality/data we thought was really necessary for the MVP
-      
-      
+
+# Leg 3: Production and Testing
+
+### URL: (link) http://blooming-ravine-67304.herokuapp.com/
+
+### Testing
+Framework: rspec
+
+Since we decided to use rspec, our tests are in the 'spec' folder under Incident tracker rather than the 'test' folder (which contains the default unit tests that came with the scaffold)
+
+We decided to use rspec as our testing framework mainly because of the community support and documentation.  Rspec is very widely used and we found a lot of tutorials and community threads to help us understand and implement our tests.  Another aspect of rspec we liked was the readability.  The 'describe' and 'context' syntax are very easy to understand when running tests and sharing with other members of the group.    
+
+Because we utilized the scaffold feature, many of the unit tests were created for us.  We wrote some view tests, model tests, and controller tests trying to focus on the the coding/functionality we added. 
+
+### Future performance/optimizations for 'many' users
 
 
+### Other Notes
+We added the upload image functionality
+Test and development frameworks/databases added
 
 
     
