@@ -15,10 +15,12 @@
       <div class="info__text"><%= @incident.description %></div>
     </div>
 
-    <div class="incident__info">
-      <label class="info__label">Media</label><br>
-      <img src=<%= @incident.media.url %>/>
-    </div>
+    <% if @incident.media.url %>
+      <div class="incident__info">
+        <label class="info__label">Media</label><br>
+        <img src=<%= @incident.media.url %>/>
+      </div>
+    <% end %>
   </div>
 
   <div class="column_two">
