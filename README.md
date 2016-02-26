@@ -20,9 +20,10 @@ These are simply the departments that comprise Operations Services. The members 
 #Leg 2: MVP
 
 ### Setup and installation instructions
-Clone our master branch
-Go into IncidentTracker folder
-I
+Clone our master branch, Go into IncidentTracker folder, bundle install, rake db:create, rake db:migrate
+
+ruby version 2.3.0, rails version 4.2.1
+
 
 
 ### Architecture and Tools
@@ -66,7 +67,7 @@ We have additionally added the datatables plugin for simple pagination on our in
 
 
 ### Other Notes
-We added the upload image functionality, test and development frameworks/databases, and various design changes based on the feedback we have recieved
+We added the test and development frameworks/databases and various design changes based on the feedback we have recieved
 
 
     
