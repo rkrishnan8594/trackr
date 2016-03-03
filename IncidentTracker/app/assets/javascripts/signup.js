@@ -6,8 +6,12 @@ $(document).on('page:load', function() {
       $('.department').hide();
     }
   });
+});
 
-  /*$('.table__row').on('click', function() {
-    window.document.location = $(this).data("href");
-  });*/
+$(document).ready(function() {
+  var str = $('.js--media').attr('src');
+  if(str.substr(-1) === '/') {
+    str = str.substr(0, str.length - 1);
+    $('.js--media').attr('src', str);
+  }
 });
