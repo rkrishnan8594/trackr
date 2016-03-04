@@ -35,12 +35,12 @@ We spent a lot of time trying to deal with this datatables issue, but we found i
 ### Final Results
 Once again these results are on the the incidents timeline page, since all other pages scored at least as well
 
-When running Yslow our perforamce increased from A(90) to to A(99), which we are quite happy with.  The places where performance can be improved are
+When running Yslow our performance increased from A(90) to to A(99), which we are quite happy with.  The places where performance can be improved are
 * C configure entity tags
 * D use cookie free domains
 
-The first is related to the datatables gem as mentioned earlier.   As for using cookie free domains, spent a lot of time configuring s3 for static content and images and hoped that we would be able to take care of it along the way, but unfortunately it has not yet been resolved.  Currently we are still working this one.
+The first is related to the Datatables CDN image tags as mentioned earlier.   As for using cookie free domains, spent a lot of time configuring s3 for static content and images and hoped that we would be able to take care of it along the way, but unfortunately it has not yet been resolved.  Currently we are still working this one.
 
-When running pagespeed our performance increesed from 86% to 89%. The main reason this speed up isn't as much as we wanted was due to to the render-blocking js/css that was added to by using the cdn version of datatables.  Also as mentioned earlier Pagespeed also did not pick up our minification of our js files, although we manually confirmed it was happening and Yslow agrees.
+When running pagespeed our performance increesed from 86% to 89%. The main reason this speed up isn't as much was due to to the render-blocking js/css that was added to by using the cdn version of datatables.  Also as mentioned earlier Pagespeed also did not pick up our minification of our js files, although we manually confirmed it was happening and Yslow agrees.
 
 In conclusion we were able to solve almost everything except a few problems relating to the datatables gem and the cookie free domain.  Our current plan is to spend a bit more time working with Datatables and researching the cookie free domains. We feel that the decrease in performance from Datatables is not very significant compared to the look and functionality value it adds, but we still want to try and resolve them.
