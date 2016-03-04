@@ -34,3 +34,15 @@ We spent a lot of time trying to deal with this, but we found it very tricky to 
 
 
 ### Final Results
+Once again these results are on the the incidents timeline, since all other pages scored at least as well
+
+When running Yslow our perforamce increased from A(90) to to A(97), which we consider to be a good increase.  The places where performance can be improved are were
+* C Add expires headers
+* C configure entity tags
+* D use cookie free domains
+
+The first two are related to the datatables gem again. I may change this comment, but we are still in the process of experimenting with fixing these issues, so at the momment our css for datatables is on a CDN and the javascript is not, so that is what is causing a C for the first two.  As for using cookie free domains, spent a lot of time configuring s3 for static content and images and hoped that we would be able to take care of it along the way, but unfortunately it has not yet resolved itself.  Currently we are looking into how to fix this one
+
+When running pagespeed our performance increesed from 88% to 91%. The main reason this speed up isn't as much as we wanted was due to setting the datatables plug in as an external cdn. All the other errors are solved except this render-blocking css now with datatables as an external CDN.  
+
+In conclusion we were able to solve almost everything except the problems relating to the datatables gem.  Our current plan is to spend a bit more time trying to fix that (since it does add nice looks and functionality), but if we can't we may look for alternatives
