@@ -1,4 +1,4 @@
-# Static Performance Report
+# Static Content Performance Report
 
 ### Tools Used
 Yslow, Pagespeed Tools
