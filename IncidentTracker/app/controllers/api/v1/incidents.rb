@@ -16,6 +16,18 @@ module API
         get ":id", root: "incident" do
           Incident.where(id: permitted_params[:id]).first!
         end
+
+        desc "Submits an incident"
+        params do
+          requires :location, type: String, desc: "Location of the incident"
+          requires :severity, type: String, desc: "Severity of the incident"
+        end
+        post do
+          Incident.create!({
+            location: params[:location],
+            severity: params[:severity]
+          })
+        end
       end
     end
   end

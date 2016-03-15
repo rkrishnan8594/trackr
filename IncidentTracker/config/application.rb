@@ -22,6 +22,11 @@ module IncidentTracker
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
+  end
+end
+
+module Api
+  class Application < Rails::Application
     config.middleware.use Rack::Cors do
       allow do
         origins "*"

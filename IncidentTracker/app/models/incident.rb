@@ -12,7 +12,11 @@ class Incident < ActiveRecord::Base
   end
 
   def set_user!(user)
+    puts "HELLO"
     self.user_id = user.id
-#    self.save!
+  end
+
+  def set_anonymous!
+    self.user_id = 1
   end
 end
