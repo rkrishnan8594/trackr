@@ -25,11 +25,11 @@ class IncidentsController < ApplicationController
   # POST /incidents.json
   def create
     @incident = Incident.new(incident_params)
-    if current_user
-      @incident.set_user!(current_user)
-    else
+    #if current_user
+    #  @incident.set_user!(current_user)
+    #else
       @incident.set_anonymous!
-    end
+    #end
 
     respond_to do |format|
       if @incident.save
