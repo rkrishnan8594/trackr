@@ -1,7 +1,7 @@
 $(document).on('page:change', function() {
   $("#datatable").DataTable({
-    responsive: true
+    "order": [[5, "desc"], [6, "desc"]],
+    responsive: true,
+    retrieve: true
   });
-
-  //$('.incident__new-btn').detach().prependTo('.dataTables_wrapper');
 });

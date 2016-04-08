@@ -1,8 +1,9 @@
 <div class="timeline">
+  <p class="show_incidents" style="display:none">More incidents have recently been added. <a href="#">Show Incidents</a></p>
   <p id="notice"><%= notice %></p>
   <table id="datatable" class="timeline__table responsive no-wrap">
     <thead class="table__head">
-      <tr class="table__fields">
+      <tr class="table__fields table__row">
         <th>User</th>
         <th>Description</th>
         <th>Location</th>
@@ -15,8 +16,8 @@
     </thead>
 
     <tbody>
-      <% @incidents.each do |incident| %>
-        <tr class="table__row" data-href="incidents/<%= incident.id %>">
+      <% @incidents.reverse.each do |incident| %>
+        <tr role="row" class="table__row" data-href="incidents/<%= incident.id %>">
           <td>
             <%= User.find(incident.user_id).first_name %>
             <%= User.find(incident.user_id).last_name %>
@@ -29,8 +30,6 @@
           <td><%= (incident.time).to_s(:time) %></td>
           <td>
             <%= link_to 'Show', incident_path(incident) %><br>
-            <%= link_to 'Edit', edit_incident_path(incident) %><br>
-            <%= link_to 'Destroy', incident, method: :delete, data: { confirm: 'Are you sure?' } %>
           </td>
         </tr>
       <% end %>

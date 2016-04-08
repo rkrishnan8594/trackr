@@ -44,4 +44,6 @@
       <%= (@incident.time).to_s(:time) %>
     </div>
   </div>
+<%= link_to 'Edit', edit_incident_path(@incident) %><br>
+<%= link_to 'Destroy', @incident, method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>
