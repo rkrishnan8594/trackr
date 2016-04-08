@@ -22,7 +22,7 @@ This javascript function is done with set timeout, so that it will wait till the
 
 ###Images
 
-in progress, currently working with RMagick gem to resize images to thumbnails to use display in our tables.
+Compressing images was fairly straightforward.  We simply added a column to our datatable for the thumbnail and used a gem called miniMagick to compress our images into thumbnails.  We chose miniMagick because of the support with CarrierWave which we are using for our images.
 
 ###Caching
 
