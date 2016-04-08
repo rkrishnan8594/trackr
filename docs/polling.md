@@ -37,7 +37,13 @@ we then redraw the table to update the incidents in so that our user can see the
 
 ###Images
 
-Compressing images was fairly straightforward.  We simply added a column to our datatable for the thumbnail and used a gem called miniMagick to compress our images into thumbnails.  We chose miniMagick because of the support with CarrierWave which we are using for our images.
+Compressing images was fairly straightforward.  We simply added a column to our datatable for the thumbnail and used a gem called miniMagick to compress our images into thumbnails.  We chose miniMagick because of the support with CarrierWave which we are using for our images.  Adding compression was as simple as including miniMagic in our mediauploader file and adding code to create a new version of our media content:
+
+       version :thumb do
+         process :resize_to_fit => [50, 50]
+       end
+
+We can then call <img src="<%= incident.media.thumb.url %>"/> in the new column of our table to see the thumbnails.
 
 ###Caching
 
@@ -57,6 +63,8 @@ Once we had made our decision and found a good resource, implementing the cachin
                       }
 
 ###Looking ahead
+
+We currently have one bug we are still working on: it has to do with our datatables gem when we are polling new incidents.  the time the incident is submitted is currently incorrect for a polled incident, and it sometimes causes the incedent to show up at the bottom instead of the top.  We should have this fixed soon.
 
 As mentioned before we would have liked to get websockets or sockets.io working, but it was tricky.  Our naive way works for a low volume of (not ill-intentioned) users.  Ideally we would like to take some preventative measures such as, since we have user log in implemented, limit the amount of queries from an individual users.  We ideally would have a rate limiting system such as was discussed in class no just because of this polling system, but for users accessing our API in general.  We do feel for this leg our method works ok.
 
