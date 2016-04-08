@@ -24,6 +24,7 @@ IncidentPoller.prototype.addNewIncident = function(incident) {
     var name = data.user.first_name + " " + data.user.last_name;
     table.row.add([
         name,
+        "<img src='" + incident.media.media.thumb.url + "'/>",
         incident.description,
         incident.location,
         "Open",
