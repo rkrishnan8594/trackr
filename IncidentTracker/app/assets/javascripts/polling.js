@@ -11,8 +11,8 @@ IncidentPoller.prototype.poll = function() {
       for(var i = 0; i < diff; i++)
         self.addNewIncident(data.incidents[len - 1 - i]);
     });
-    setTimeout(async, 10000);
-  }, 10000);
+    setTimeout(async, 60000);
+  }, 60000);
 };
 
 IncidentPoller.prototype.addNewIncident = function(incident) {
