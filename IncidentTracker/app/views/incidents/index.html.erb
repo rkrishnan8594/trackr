@@ -5,6 +5,7 @@
     <thead class="table__head">
       <tr class="table__fields table__row">
         <th>User</th>
+        <th>Media</th>
         <th>Description</th>
         <th>Location</th>
         <th>Status</th>
@@ -22,6 +23,7 @@
             <%= User.find(incident.user_id).first_name %>
             <%= User.find(incident.user_id).last_name %>
           </td>
+          <td><img src="<%= incident.media.thumb.url %>"/></td>
           <td><%= incident.description %></td>
           <td><%= incident.location %></td>
           <td>Open</td>
