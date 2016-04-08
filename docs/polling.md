@@ -43,7 +43,11 @@ Compressing images was fairly straightforward.  We simply added a column to our 
          process :resize_to_fit => [50, 50]
        end
 
-We can then call <img src="<%= incident.media.thumb.url %>"/> in the new column of our table to see the thumbnails.
+We can then call in the new column of our table to see the thumbnails.
+
+    <img src="<%= incident.media.thumb.url %>"/> 
+    
+
 
 ###Caching
 
