@@ -16,15 +16,17 @@ The first thing we did was set the default sorting priority of our datatables to
 This first means that new incidents will appear at the top of the table ( since they are displayed in order ) and second that 
 the first time a user sees our incident index page it will display newest first. 
 
-We then wrote a javascript function whose purpose was to use our get incidents endpoint via our api to query our server for our incidents.  It then compares the number of incidents it gets back to the number in the table.  If there are more than the number in our table we know a new one has been added, and we insert a new row into our table.  we then redraw the table to update the incidents in so that our user can see the new ones.  Note that this redrawing is not a refresh of the page of any sort, and to the user it appears as if a new incident has simply appeared at the top.  
+We then wrote a javascript function in a file called polling.js whose purpose was to use our get incidents endpoint via our api to query our server for our incidents.  It then compares the number of incidents it gets back to the number in the table.  If there are more than the number in our table we know a new one has been added, and we insert a new row into our table.  we then redraw the table to update the incidents in so that our user can see the new ones.  Note that this redrawing is not a refresh of the page of any sort, and to the user it appears as if a new incident has simply appeared at the top.  
 
 This javascript function is done with set timeout, so that it will wait till the ajax is finished loading before querying again.  Also we decided to poll every minute to reduce the stress on our servers (as opposed to say 10 or 30 seconds).  As of now it appears to be functioning well.
 
 ###Images
 
+in progress, currently working with RMagick gem to resize images to thumbnails to use display in our tables.
 
 ###Caching
 
+in progress, currently working with memcached and dalli to cache our dynamic content (incidents)
 
 ###Looking ahead
 
