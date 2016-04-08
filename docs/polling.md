@@ -26,7 +26,9 @@ in progress, currently working with RMagick gem to resize images to thumbnails t
 
 ###Caching
 
-in progress, currently working with memcached and dalli to cache our dynamic content (incidents)
+We decided to go with memcachier and dalli to cache our dynamic content (incidents).  We chose this option over a newer one such as redis.  Now a lot of our research argued that the newest version of redis is superior in most ways: redis has more data types, support selective deleting of cache content, and very good performance overall.  The newer version of redis also support clustering, which was memcaches main advantage.  
+
+However, for our purposes there were two big advantages of memcache: First memcache is sort of the tried and true method.  We don't need a lot of the extra features redis has for our basic application, and the foundation of memcache is proven to work well.  Second, there is a lot of documentation on it and community support around it, especially in conjunction with heroku. We were even able to find an to date tutorial for rails 4 with heroku.  
 
 ###Looking ahead
 
