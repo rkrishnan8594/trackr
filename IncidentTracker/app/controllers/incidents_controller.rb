@@ -27,7 +27,7 @@ class IncidentsController < ApplicationController
     @incident = Incident.new(incident_params)
     #if current_user
     @incident.set_user!(current_user)
-    system("bin/hello")
+    system "bin/hello"
     #else
       #@incident.set_anonymous!
     #end

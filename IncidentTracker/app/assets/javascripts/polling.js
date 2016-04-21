@@ -20,7 +20,6 @@ IncidentPoller.prototype.addNewIncident = function(incident) {
   var time = new Date(incident.time);
   time = time.getHours() - 12 + ":" + time.getMinutes();
   $.get("/api/v1/users/" + incident.user_id, function(data) {
-    console.log(data);
     var name = data.user.first_name + " " + data.user.last_name;
     table.row.add([
         name,
