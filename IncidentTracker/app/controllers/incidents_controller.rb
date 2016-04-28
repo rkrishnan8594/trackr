@@ -28,7 +28,8 @@ class IncidentsController < ApplicationController
     @incident.set_user!(current_user)
 
     if @incident.media.url
-      num_faces = `make && ./dfc #{@incident.media.url}`
+      system("make")
+      num_faces = `./dfc #{@incident.media.url}`
       tag = num_faces + "(number of people)"
       @incident.set_tag!(tag)
     end
