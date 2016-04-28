@@ -28,6 +28,7 @@ class IncidentsController < ApplicationController
     @incident.set_user!(current_user)
 
     if @incident.media.url
+      system("export PKG_CONFIG_PATH=.heroku/opencv/lib/pkgconfig")
       system("make")
       num_faces = `./dfc #{@incident.media.url}`
       tag = num_faces + "(number of people)"
