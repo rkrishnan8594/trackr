@@ -28,8 +28,7 @@ class IncidentsController < ApplicationController
     @incident.set_user!(current_user)
 
     if @incident.media.url
-      #system("sh heroku-opencv.sh")
-      #system("make")
+      puts @incident.media.url
       num_faces = `./dfc #{@incident.media.url}`
       tag = num_faces + "(number of people)"
       @incident.set_tag!(tag)
