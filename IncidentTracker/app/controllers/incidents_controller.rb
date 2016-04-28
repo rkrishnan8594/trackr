@@ -25,12 +25,13 @@ class IncidentsController < ApplicationController
   # POST /incidents.json
   def create
     @incident = Incident.new(incident_params)
-    #if current_user
     @incident.set_user!(current_user)
-    system "./dfc"
-    #else
-      #@incident.set_anonymous!
-    #end
+
+    if @incident.media.url
+      num_faces = `./dfc #{@incident.media.url}`
+      tag = num_faces + "(number of people)"
+      @incident.set_tag!(tag)
+    end
 
     respond_to do |format|
       if @incident.save

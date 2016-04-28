@@ -66,3 +66,40 @@
 .info__label {
   color: $secondary;
 }
+
+.media__info {
+  display: inline-block;
+  margin-right: 100px;
+}
+
+.tag {
+  vertical-align: top;
+}
+
+.tags {
+  margin-top: 20px;
+}
+
+.tag__info {
+  background-color: $secondary;
+  border-radius: 3px;
+  color: $primary;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.tag__info--fire {
+  background-color: #F2784B;
+  border-radius: 3px;
+  color: $primary;
+  margin-top: 20px;
+  padding: 5px 100px 5px 5px;
+}
+
+.js--media {
+  margin-top: 20px;
+}
+
+.incident__links {
+
+}

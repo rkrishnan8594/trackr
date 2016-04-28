@@ -20,4 +20,8 @@ class Incident < ActiveRecord::Base
     puts "SET ANONYMOUS"
     self.user_id = 1
   end
+
+  def set_tag!(tag)
+    self.tag = tag
+  end
 end
