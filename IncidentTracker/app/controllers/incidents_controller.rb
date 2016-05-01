@@ -29,9 +29,7 @@ class IncidentsController < ApplicationController
 
     if @incident.media.url
       puts @incident.media.url
-      location = `ls`
-      puts location
-      num_faces = `./dfc https://s3.amazonaws.com/incidenttrackerrowankrishnan/uploads/incident/media/26/people.jpg`
+      num_faces = `./dfc`
       tag = num_faces + "(number of people)"
       @incident.set_tag!(tag)
     end
