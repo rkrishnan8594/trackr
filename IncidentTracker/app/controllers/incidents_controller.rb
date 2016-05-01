@@ -29,9 +29,7 @@ class IncidentsController < ApplicationController
 
     if @incident.media.url
       puts @incident.media.url
-      system "export PKG_CONFIG_PATH=.heroku/opencv/lib/pkgconfig"
-      system "g++ detect_faces.cpp -o dfc `pkg-config --cflags --libs opencv`"
-      num_faces = `./dfc`
+      num_faces = `python detect_faces.py #{@incident.media.url}`
       tag = num_faces + "(number of people)"
       @incident.set_tag!(tag)
     end
