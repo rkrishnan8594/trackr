@@ -1,7 +1,7 @@
+#include "opencv2/core/core.hpp"
 #include "opencv2/objdetect/objdetect.hpp"
 #include "opencv2/highgui/highgui.hpp"
 #include "opencv2/imgproc/imgproc.hpp"
-
 #include <iostream>
 #include <stdio.h>
 
@@ -9,58 +9,73 @@ using namespace std;
 using namespace cv;
 
 // Function Headers
-void detectAndDisplay(Mat frame);
-
+void detectAndPrint(Mat frame);
+void InsideOut(Mat frame);
 // Global variables
-// Copy this file from opencv/data/haarscascades to target folder
 string face_cascade_name = "haarcascade_frontalface_alt.xml";
 CascadeClassifier face_cascade;
-string window_name = "Capture - Face detection";
-int filenumber; // Number of file to be saved
-string filename;
 
 // Function main
-int main(int argc, char *argv[])
+int main(int argc,char *argv[])
 {
-    // Load the cascade
-    if (!face_cascade.load(face_cascade_name)) {
-        printf("--(!)Error loading\n");
+    if (argc < 2)
+    {
+        std::cout<<"Error: Invalid Arguments\n";
         return (-1);
     }
-
-    // Read the image file
-    Mat frame = imread(argv[1]);
-
-    // Apply the classifier to the frame
-    if (!frame.empty()){
-        detectAndDisplay(frame);
-    } else{
-        printf(" --(!) No captured frame -- Break!");
+    // Load the cascade
+    if (!face_cascade.load(face_cascade_name))
+    {
+        std::cout<<"Error loading the Cascade file\n";
+        return (-1);
     }
-
-    int c = waitKey(10);
-
+    // Read the image file
+    Mat frame;
+    VideoCapture cap(argv[1]);
+    if ( cap.isOpened() )
+    {
+        cap>>frame;
+    }
+//    Mat frame = imread(img,CV_LOAD_IMAGE_COLOR);
+//    int a = atoi(argv[2]);
+    if (!frame.empty()){
+  //      if (a == 1)
+    //    {
+            detectAndPrint(frame);
+      //  }
+     //   else if (a==2)
+       // {
+   //         InsideOut(frame);
+     //   }
+    }
+    else{
+        std::cout<<" --(!) No captured frame -- Break!";
+    }
     return 0;
 }
 
-// Function detectAndDisplay
-void detectAndDisplay(Mat frame)
+void detectAndPrint(Mat frame)
 {
     std::vector<Rect> faces;
-    Mat frame_gray;
-    Mat crop;
-    Mat res;
-    Mat gray;
-    string text;
-    stringstream sstm;
-
-    cvtColor(frame, frame_gray, COLOR_BGR2GRAY);
-    equalizeHist(frame_gray, frame_gray);
-
-    // Detect faces
-    face_cascade.detectMultiScale(frame_gray, faces, 1.1, 2, 0 | CASCADE_SCALE_IMAGE, Size(30, 30));
-
-    // Set Region of Interest
+    face_cascade.detectMultiScale(frame, faces, 1.1, 3, 0 , Size(30, 30));
     std::cout<<faces.size() << endl;
-
 }
+
+void InsideOut(Mat frame)
+{ 
+    Mat gray, edge, draw;
+    cvtColor(frame, gray, CV_BGR2GRAY);
+    Canny( gray, edge, 50, 150, 3); 
+    int count=0;
+    for(int i = 0; i < edge.rows; i++)
+        for(int j = 0; j < edge.cols; j++)
+        {
+            if (edge.at<double>(i,j)==0)
+            {
+                count++;                
+            }
+        }
+    std::cout << (float(edge.total() - count) / float(edge.total())) <<endl;
+}
+
+
