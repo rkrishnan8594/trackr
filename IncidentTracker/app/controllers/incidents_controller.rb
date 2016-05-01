@@ -29,6 +29,7 @@ class IncidentsController < ApplicationController
 
     if @incident.media.url
       puts @incident.media.url
+      puts "Test"
       num_faces = `python detect_faces.py #{@incident.media.url}`
       tag = num_faces + "(number of people)"
       @incident.set_tag!(tag)
