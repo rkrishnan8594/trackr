@@ -1,1 +1,2 @@
-IncidentTracker
+Python == 2.7.6
+Opencv == 2.4.9
